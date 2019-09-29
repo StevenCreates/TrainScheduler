@@ -9,26 +9,48 @@
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
 </head>
 <body>
+<div class="ml-6 mr-6">
   <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2">Hobo Train Station</span>
-  <div class="table w-full mt-5">
-      <div class="table-row">
-        <div class="table-cell bg-green-300 text-black px-4 py-2 text-sm">#</div>
-        <div class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Train Name</div>
-        <div class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Destination</div>
-        <div class="table-cell bg-green-300 text-black px-4 py-2 text-sm">First Train</div>
-        <div class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Frequency</div>
-        <div class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Next Train</div>
-        <div class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Minutes Till Next Train</div>
+  <div class="flex-1 table w-full mt-5">
+      <div class="table-row ">
+        <div id="number" class="table-cell bg-green-300 text-black px-4 py-2 text-sm">#</div>
+        <div id="trainName" class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Train Name</div>
+        <div id="destination" class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Destination</div>
+        <div id="firstTrain" class="table-cell bg-green-300 text-black px-4 py-2 text-sm">First Train</div>
+        <div id="frequency" class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Frequency</div>
+        <div id="nextTrain" class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Next Train</div>
+        <div id="minutes" class="table-cell bg-green-300 text-black px-4 py-2 text-sm">Minutes Till Next Train</div>
       </div>
+  </div>
+<div class="table w-full mt-5">
+<div class="emptyRow table-row">
 
+</div>
+</div>
 
-
-
-
-
-
-
-
+<div class="w-auto m-6 mt-10">
+<form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="input-name">Train Name:</label>
+        <input class="form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-name" type="text">
+    </div>
+    <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="input-dest">Destination:</label>
+        <input class="form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-dest" type="text">
+    </div>
+    <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="input-time">1st Train Leaves:</label>
+        <input class="form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-time" type="time">
+    </div>
+    <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="freq-input">Frequency:</label>
+            <input class="form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-freq" type="number">
+        </div>
+    <button class="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" 
+    id="add-user" type="submit">Submit</button>
+</form>
+</div>
+</div>
 
 
 
