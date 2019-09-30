@@ -79,14 +79,14 @@ database.ref().on("child_added", function (snapshot) {
     console.log(sv.dateAdded);
 
 
-    $('#emptyRow').append('<div class="table-row">')
-    $('#emptyRow').append('<div class=" table-cell bg-red-300 text-black px-4 py-2 text-sm">' + newTrain + '</div>')
-    $('#emptyRow').append(' <div class=" w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.name + '</div>')
-    $('#emptyRow').append(' <div class=" w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.destination + '</div>')
-    $('#emptyRow').append(' <div class=" w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.inputTimeConvert + '</div>')
-    $('#emptyRow').append(' <div class=" w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.theFreq + '</div>')
-    $('#emptyRow').append(' <div class=" w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.strTrain + '</div>')
-    $('#emptyRow').append(' <div class=" w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.tillTrain + '</div></div>')
+    $('#emptyRow').append('<div class="flex-auto table-row">')
+    $('#emptyRow').append('<div class="flex-auto border-dashed border-2 border-gray-600 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + newTrain + '</div>')
+    $('#emptyRow').append(' <div class="flex-auto border-dashed border-2 border-gray-600 w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.name + '</div>')
+    $('#emptyRow').append(' <div class="flex-auto border-dashed border-2 border-gray-600 w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.destination + '</div>')
+    $('#emptyRow').append(' <div class="flex-auto border-dashed border-2 border-gray-600 w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.inputTimeConvert + '</div>')
+    $('#emptyRow').append(' <div class="flex-auto border-dashed border-2 border-gray-600 w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.theFreq + '</div>')
+    $('#emptyRow').append(' <div class="flex-auto border-dashed border-2 border-gray-600 w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.strTrain + '</div>')
+    $('#emptyRow').append(' <div class="flex-auto border-dashed border-2 border-gray-600 w-1/6 table-cell bg-red-300 text-black px-4 py-2 text-sm">' + sv.tillTrain + '</div></div>')
 
 
 
