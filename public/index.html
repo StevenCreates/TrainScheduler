@@ -3,30 +3,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Pirate Ship Schedule</title>
   <link rel="stylesheet" href="assets/style/tailwind.css">
   <link rel="stylesheet" href="assets/style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Pirata+One&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4d4428ecea.js" crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
 </head>
 <body>
+    <span class="flex-auto text-4xl border-b-2 border-white block text-white text-center bg-black px-4 py-2"><i class="fas fa-skull-crossbones"></i> SevenSeas Ship Schedule <i class="fas fa-skull-crossbones"></i></span>
 <div class="flex-auto container mx-auto">
-  <span class="flex-auto block text-gray-700 border-solid border-4 border-gray-800 text-center bg-gray-400 px-4 py-2">Hobo Train Station</span>
+
   
-  <div class="flex-auto  table w-full mt-5">
-      <div class="flex-auto  table-row ">
-        <div id="number" class="flex-auto  table-cell bg-green-300 text-black px-4 py-2 text-sm">#</div>
-        <div id="trainName" class="flex-auto  w-1/6 table-cell bg-green-300 text-black px-4 py-2 text-sm">Train Name</div>
-        <div id="destination" class="flex-auto  w-1/6 table-cell bg-green-300 text-black px-4 py-2 text-sm">Destination</div>
-        <div id="firstTrain" class="flex-auto  w-1/6 table-cell bg-green-300 text-black px-4 py-2 text-sm">First Train</div>
-        <div id="frequency" class="flex-auto  w-1/6 table-cell bg-green-300 text-black px-4 py-2 text-sm">Frequency</div>
-        <div id="nextTrain" class="flex-auto  w-1/6 table-cell bg-green-300 text-black px-4 py-2 text-sm">Next Train</div>
-        <div id="minutes" class="flex-auto  w-1/6 table-cell bg-green-300 text-black px-4 py-2 text-sm">Minutes Till Next Train</div>
+  <div class="flex-auto shadow-md table w-full mt-3 rounded-lg">
+      <div class="flex-auto table-row ">
+        <div id="number" class="flex-auto  table-cell bg-black border border-white border-2 text-white px-4 py-2 text-sm">#</div>
+        <div id="trainName" class="flex-auto  w-1/6 table-cell bg-black border border-white border-2 text-white px-4 py-2 text-sm">Ship Name</div>
+        <div id="destination" class="flex-auto  w-1/6 table-cell bg-black border border-white border-2 text-white px-4 py-2 text-sm">Destination</div>
+        <div id="firstTrain" class="flex-auto  w-1/6 table-cell bg-black border border-white border-2 text-white px-4 py-2 text-sm">First Ship</div>
+        <div id="frequency" class="flex-auto  w-1/6 table-cell bg-black border border-white border-2 text-white px-4 py-2 text-sm">Frequency</div>
+        <div id="nextShip" class="flex-auto  w-1/6 table-cell bg-black border border-white border-2 text-white px-4 py-2 text-sm">Next Ship</div>
+        <div id="minutes" class="flex-auto  w-1/6 table-cell bg-black border border-white border-2 text-white px-4 py-2 text-sm">Minutes Till Next Ship</div>
       </div>
+      
   </div>
 
 
-<div id="emptyRow" class="flex-auto border-solid border-2 rounded border-gray-800 table w-full mt-5">
+<div id="emptyRow" class="flex-auto table w-full mt-0">
 
 
   
@@ -34,10 +38,10 @@
 
 
 
-<div class="flex-auto w-auto m-6 mt-10">
+<div class="flex-auto w-auto mt-3">
 <form class="flex-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
     <div>
-        <label class="flex-auto block text-gray-700 text-sm font-bold mb-2" for="input-name">Train Name:</label>
+        <label class="flex-auto block text-gray-700 text-sm font-bold mb-2" for="input-name">Ship Name:</label>
         <input class="flex-auto form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-name" type="text">
     </div>
     <div>
@@ -45,14 +49,14 @@
         <input class="flex-auto form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-dest" type="text">
     </div>
     <div>
-        <label class="flex-auto block text-gray-700 text-sm font-bold mb-2" for="input-time">1st Train Leaves:</label>
+        <label class="flex-auto block text-gray-700 text-sm font-bold mb-2" for="input-time">1st Ship Leaves:</label>
         <input class="flex-auto form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-time" type="time">
     </div>
     <div>
             <label class="flex-auto block text-gray-700 text-sm font-bold mb-2" for="freq-input">Frequency:</label>
             <input class="flex-auto form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="input-freq" type="number">
         </div>
-    <button class="flex-auto bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded" 
+    <button class="flex-auto mt-2 bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-purple-500 rounded" 
     id="add-user" type="submit">Submit</button>
 </form>
 </div>
